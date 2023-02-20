@@ -35,4 +35,11 @@ class Magazine
         magazine_articles.map{|articles|articles.title}
     end
 
+     #Returns an array of authors who have written more than 2 articles for the magazine
+     def contributing_authors
+        authors = Hash.new(0)
+        magazine_articles.each{ |article| authors[article.author] += 1 }
+        authors.select{ |author, count| count > 2 }.keys
+    end
+
 end
