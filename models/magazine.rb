@@ -22,4 +22,17 @@ class Magazine
      magazine_articles
     .map{|article|article.author}.uniq
     end
+
+     #Given a string of magazine's name, this method returns the first magazine object that matches
+    #magazine is a class method
+    def self.find_by_name(name)
+        Magazine.all.find{|magazine|
+        magazine.name == name}
+    end
+
+    #Returns an array strings of the titles of all articles written for that magazine
+    def article_titles
+        magazine_articles.map{|articles|articles.title}
+    end
+
 end
