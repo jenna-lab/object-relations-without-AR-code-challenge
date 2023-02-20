@@ -20,16 +20,16 @@ Author - Magazine is a many to many relationship.
 
    - Create a new file named run.rb. This will be the file from which you run your application.
 
-    -Create a new folder named models. This will be where you store your Ruby classes.
+   - Create a new folder named models. This will be where you store your Ruby classes.
 
-    -Within the model folder, create three files named author.rb, article.rb, and magazine.rb. 
+   - Within the model folder, create three files named author.rb, article.rb, and magazine.rb. 
 
-    -Open each file and define the class and its methods according to the requirements outlined in the deliverables.
+   - Open each file and define the class and its methods according to the requirements outlined in the deliverables.
 
-    -In run.rb, require each of the class files by running require_relative 'model/author', require_relative 'model/article', and require_relative 'model/magazine'.
+   - In run.rb, require each of the class files by running require_relative 'model/author', require_relative 'model/article', and require_relative 'model/magazine'.
 
-    -Instantiate some instances of the classes in run.rb and try out the methods you have created to make sure everything is working as expected.
-    And do not forget to require pry in your run.rb file.
+   - Instantiate some instances of the classes in run.rb and try out the methods you have created to make sure everything is working as expected.
+   - And do not forget to require pry in your run.rb file.
 
 
 ## Requirements
