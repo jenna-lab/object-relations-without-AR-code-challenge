@@ -1,4 +1,4 @@
-class Magazine 
+class Magazine
     attr_accessor :name, :category
     @@all = []
 
@@ -10,7 +10,7 @@ class Magazine
       
     def self.all
         @@all
-    end 
+    end
 
     #helper method for articles
     def magazine_articles
@@ -23,7 +23,7 @@ class Magazine
     .map{|article|article.author}.uniq
     end
 
-     #Given a string of magazine's name, this method returns the first magazine object that matches
+    #Given a string of magazine's name, this method returns the first magazine object that matches
     #magazine is a class method
     def self.find_by_name(name)
         Magazine.all.find{|magazine|
@@ -35,11 +35,10 @@ class Magazine
         magazine_articles.map{|articles|articles.title}
     end
 
-     #Returns an array of authors who have written more than 2 articles for the magazine
-     def contributing_authors
+    #Returns an array of authors who have written more than 2 articles for the magazine
+    def contributing_authors
         authors = Hash.new(0)
         magazine_articles.each{ |article| authors[article.author] += 1 }
         authors.select{ |author, count| count > 2 }.keys
     end
-
 end
