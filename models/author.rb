@@ -1,4 +1,4 @@
-class Author 
+class Author
     attr_reader :name
     def initialize(name)
         @name = name
@@ -10,7 +10,7 @@ class Author
         Article.all.filter {|article|
         article.author == @name }
     end
-    #Returns a unique array of Magazine instances for which the author has contributed to
+#Returns a unique array of Magazine instances for which the author has contributed to
     def magazines
         #from articles get magazine instances
         articles.map { |article| article.magazine}.uniq
@@ -21,8 +21,8 @@ class Author
      Article.new(self,magazine,title)
     end
 
-     #Returns a unique array of strings with the categories of the magazines the author has contributed to
-     def topic_areas
+    #Returns a unique array of strings with the categories of the magazines the author has contributed to
+    def topic_areas
         magazines.map{|magazine|magazine.category}.uniq
     end
 end
